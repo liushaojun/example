@@ -10,7 +10,8 @@
 
 
 基本来说，RingBuffer 拥有一个序号，这个序号指向数组中下一个可用元素
-![](http://4.bp.blogspot.com/-WCm0iWYOrfc/TgD_cVBQExI/AAAAAAAAIDI/cEohveH8LP8/s1600/RingBufferInitial.png)
+
+![](http://i.imgur.com/nqzyhjh.png)
 
 ## RingBuffer 的优点
 
