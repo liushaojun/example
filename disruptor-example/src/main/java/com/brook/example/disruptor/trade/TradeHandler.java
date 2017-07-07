@@ -16,9 +16,8 @@ public class TradeHandler implements EventHandler<Trade>, WorkHandler<Trade> {
 
     @Override
     public void onEvent(Trade trade) throws Exception {
-        //这里做具体的消费逻辑
-        trade.setId(UUID.randomUUID().toString());//生成UUID
-        log.info("id: " + trade.getId() + "|  price:");
-        log.info(trade.getPrice());
+        //消费逻辑
+        trade.setId(UUID.randomUUID().toString());
+        log.info("id: {}, price: {}" , trade.getId(),trade.getPrice());
     }
 }

@@ -11,27 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- *  Sequence: Disruptor使用Sequence来表示一个特殊组件处理的序号。和Disruptor一样，每个消费者(EventProcessor)都维持着一个Sequence。
- *  大部分的并发代码依赖这些Sequence值的运转，因此Sequence支持多种当前为AtomicLong类的特性。
- *  <br/>
-    Sequencer: 这是Disruptor真正的核心。实现了这个接口的两种生产者（单生产者和多生产者）均实现了所有的并发算法，为了在生产者和消费者之间进行准确快速的数据传递。
-    <br/>
-    SequenceBarrier: 由Sequencer生成，并且包含了已经发布的Sequence的引用，这些的Sequence源于Sequencer和一些独立的消费者的Sequence。它包含了决定是否有供消费者来消费的Event的逻辑。
-    <br/>
-   WaitStrategy：决定一个消费者将如何等待生产者将Event置入Disruptor。
-    <br/>
-    EventProcessor：主要事件循环，处理Disruptor中的Event，并且拥有消费者的Sequence。它有一个实现类是BatchEventProcessor，包含了event loop有效的实现，并且将回调到一个EventHandler接口的实现对象。
-    <br/>
-    EventHandler：由用户实现并且代表了Disruptor中的一个消费者的接口。
-    <br/>
-    Producer：由用户实现，它调用RingBuffer来插入事件(Event)，在Disruptor中没有相应的实现代码，由用户实现。
-    <br/>
-    WorkProcessor：确保每个sequence只被一个processor消费，在同一个WorkPool中的处理多个WorkProcessor不会消费同样的sequence。
-    <br/>
-    WorkerPool：一个WorkProcessor池，其中WorkProcessor将消费Sequence，所以任务可以在实现WorkHandler接口的worker吃间移交。
-    <br/>
-    LifecycleAware：当BatchEventProcessor启动和停止时，于实现这个接口用于接收通知。
- *
+ * LongEvent 测试
  * @author Shaojun Liu <liushaojun@maizijf.com>
  * @create 2017/7/6
  */
