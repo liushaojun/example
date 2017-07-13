@@ -11,7 +11,10 @@ public class App
 {
     public static void main( String[] args )
     {
+       log.info(callClazz() );
+    }
 
-       log.info( "Hello World!" );
+    public static String callClazz(){
+        return new Exception().getStackTrace()[1].getClassName();
     }
 }
