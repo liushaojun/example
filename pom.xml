@@ -17,6 +17,7 @@
         <module>disruptor-example</module>
         <module>axon-cqrs-example</module>
         <module>utils</module>
+        <module>learn-java8-example</module>
     </modules>
 
     <dependencies>

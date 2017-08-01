@@ -1,7 +1,6 @@
 package com.brook.example.utils.lang;
 
 import com.brook.example.utils.text.Strs;
-import com.sun.xml.internal.ws.util.UtilException;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -52,7 +51,7 @@ public interface ArrayUtil {
                 case "double":
                     return Arrays.toString((double[]) obj);
                 default:
-                    throw new UtilException(e);
+                    throw new RuntimeException(e);
                 }
             }
         }
@@ -105,7 +104,7 @@ public interface ArrayUtil {
      *
      * @param obj 对象，可以是对象数组或者基本类型数组
      * @return 包装类型数组或对象数组
-     * @throws UtilException 对象为非数组
+     * @throws RuntimeException 对象为非数组
      */
     static Object[] wrap(Object obj) {
         if (isArray(obj)) {
@@ -131,11 +130,11 @@ public interface ArrayUtil {
                 case "double":
                     return wrap(obj);
                 default:
-                    throw new UtilException(e);
+                    throw new RuntimeException(e);
                 }
             }
         }
-        throw new UtilException(Strs.format("[{}] is not Array!", obj.getClass()));
+        throw new RuntimeException(Strs.format("[{}] is not Array!", obj.getClass()));
     }
 
 }
