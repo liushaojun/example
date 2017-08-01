@@ -1,5 +1,6 @@
 package com.brook.example.java8.currency;
 
+import com.brook.example.java8.currency.samples.Util;
 import com.google.common.collect.ImmutableMap;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
@@ -62,11 +63,7 @@ public class CompletableFutureTest {
      */
     public String getDataFromDB(String data){
         System.out.println("-------> get data from db.");
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Util.sleep(5);
         return data;
     }
 
@@ -117,11 +114,8 @@ public class CompletableFutureTest {
 
     void handler(Map<String,String> data){
         System.out.println("-------> 处理数据");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Util.sleep(2);
+
         data.forEach((k, v) -> System.out.printf("k = %s,v = %s \n\r",k,v));
     }
 
@@ -141,11 +135,7 @@ public class CompletableFutureTest {
         if(key == null){
             throw new RuntimeException(String.format("key [%s]不存在!",key));
         }
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Util.sleep(2);
         return ImmutableMap.of(key,"redis:data");
     }
 
@@ -156,11 +146,7 @@ public class CompletableFutureTest {
     public String getDataFromNet(){
         System.out.println("-------> get data from net.");
 
-        try {
-            TimeUnit.SECONDS.sleep(6);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Util.sleep(7);
         return "net:data";
     }
 }
