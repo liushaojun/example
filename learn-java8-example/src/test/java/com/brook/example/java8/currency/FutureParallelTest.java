@@ -1,9 +1,9 @@
 package com.brook.example.java8.currency;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import static java.util.stream.Collectors.toList;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 
+import com.brook.example.java8.junit.extra.tags.Slow;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -11,9 +11,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import static java.util.stream.Collectors.toList;
-import static org.junit.jupiter.api.Assertions.assertTimeout;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Shaojun Liu <liushaojun@maizijf.com>
@@ -32,6 +32,7 @@ public class FutureParallelTest {
 
     @DisplayName("串行流")
     @Test
+    @Slow
     void seq() {
         assertTimeout(Duration.ofSeconds(11), () -> MyTask.runSequentially(tasks));
     }

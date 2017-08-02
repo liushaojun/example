@@ -1,21 +1,27 @@
 package com.brook.example.java8.currency;
 
-import com.brook.example.java8.currency.samples.Util;
-import com.google.common.collect.ImmutableMap;
-import org.assertj.core.util.Lists;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.brook.example.java8.currency.samples.Util;
+import com.brook.example.java8.junit.extra.tags.Slow;
+import com.google.common.collect.ImmutableMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.assertj.core.util.Lists;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Shaojun Liu <liushaojun@maizijf.com>
  * @create 2017/7/31
  */
+@Slow
 public class CompletableFutureTest {
 
     // 合并
