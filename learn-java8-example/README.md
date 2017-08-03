@@ -144,4 +144,5 @@ Predicate<Boolean> isNull = Objects::isNull;
 
 Predicate<String> isEmpty = String::isEmpty;
 Predicate<String> isNotEmpty = isEmpty.negate();
+
 ```
