@@ -134,14 +134,15 @@ backToString.apply("123");     // "123"
 ```
 
 - Predicate 断言类型接口
+
 ```java
 Predicate<String> predicate = (s) -> s.length() > 0;
 predicate.test("foo");              // true
 predicate.negate().test("foo");     // false
-
+//
 Predicate<Boolean> nonNull = Objects::nonNull;
 Predicate<Boolean> isNull = Objects::isNull;
-
+//
 Predicate<String> isEmpty = String::isEmpty;
 Predicate<String> isNotEmpty = isEmpty.negate();
 
