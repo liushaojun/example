@@ -1,0 +1,11 @@
+DROP TABLE  IF EXISTS `user`;
+CREATE TABLE `user`(
+  id BIGINT GENERATED  by DEFAULT as IDENTITY ,
+  username VARCHAR(64) NOT NULL ,
+  password VARCHAR(255) NOT NULL ,
+  nickname VARCHAR(20) NULL DEFAULT '',
+  roles VARCHAR(2500) NULL  DEFAULT '',
+  create_at TIMESTAMP,
+  update_at TIMESTAMP ,
+  PRIMARY KEY (id)
+);
