@@ -7,6 +7,7 @@
 ![](http://biezhi.me/static/img/article/java8-banner.png)
 
 <div style="text-align:center;font-size:20px;"> 开启JAVA8之路 </div>
+
 ### 在线ppt
 http://www.ipresst.com/w/pdniko/play
 
