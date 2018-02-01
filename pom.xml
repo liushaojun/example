@@ -19,6 +19,11 @@
         <module>utils</module>
         <module>learn-java8-example</module>
         <module>distribute-lock</module>
+        <module>jooq-example</module>
+        <module>security-example</module>
+        <module>metrics-example</module>
+        <module>jmh-example</module>
+      <module>rabbit-mq-example</module>
     </modules>
     <dependencyManagement>
         <dependencies>
