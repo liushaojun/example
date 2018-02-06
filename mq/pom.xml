@@ -15,6 +15,7 @@
  <modules>
    <module>rabbit-mq-example</module>
    <module>kafka-example</module>
+   <module>nats-example</module>
  </modules>
 
 </project>

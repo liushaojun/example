@@ -171,3 +171,7 @@ file=test.sink.txt
 使这些应用程序具有高度可伸缩性，弹性，容错性，分布式等特性。
 [官网文档](http://kafka.apache.org/10/documentation/streams/quickstart)
 
+---
+
+- 摘抄文章: [http://www.54tianzhisheng.cn/2018/01/05/SpringBoot-Kafka/](http://www.54tianzhisheng
+.cn/2018/01/05/SpringBoot-Kafka/)

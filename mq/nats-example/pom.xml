@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
+    <artifactId>mq</artifactId>
     <groupId>com.brook.example</groupId>
-    <artifactId>example</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>kafka-example</artifactId>
+  <artifactId>nats-example</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>nats-example</name>
+  <url>http://maven.apache.org</url>
+
   <dependencies>
+    <!-- nats starter-->
     <dependency>
-      <groupId>org.springframework.kafka</groupId>
-      <artifactId>spring-kafka</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.brook.example</groupId>
-      <artifactId>utils</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>com.anoyi</groupId>
+      <artifactId>spring-boot-starter-nats</artifactId>
+      <version>1.0-RELEASE</version>
     </dependency>
   </dependencies>
-
 </project>
