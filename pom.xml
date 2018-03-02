@@ -25,6 +25,7 @@
     <module>jmh-example</module>
     <module>mq</module>
     <module>batch</module>
+    <module>network-example</module>
   </modules>
   <dependencyManagement>
     <dependencies>
