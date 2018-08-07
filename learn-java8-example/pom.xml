@@ -20,6 +20,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.brook.example</groupId>
+            <artifactId>utils</artifactId>
+        </dependency>
         <!--如果使用IDEA 只需要引入5.0.0-M4 这个版本-->
         <!--<dependency>-->
             <!--<groupId>org.junit.jupiter</groupId>-->
